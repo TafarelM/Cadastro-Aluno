@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbImgUsuario = new System.Windows.Forms.PictureBox();
             this.cbRgExp = new System.Windows.Forms.ComboBox();
             this.dateTimeDataNasc = new System.Windows.Forms.DateTimePicker();
             this.rbtnFeminino = new System.Windows.Forms.RadioButton();
@@ -59,9 +60,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSelecionarImg = new System.Windows.Forms.Button();
+            this.btnSalvarImg = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +71,9 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnSalvarImg);
+            this.panel1.Controls.Add(this.btnSelecionarImg);
+            this.panel1.Controls.Add(this.pbImgUsuario);
             this.panel1.Controls.Add(this.cbRgExp);
             this.panel1.Controls.Add(this.dateTimeDataNasc);
             this.panel1.Controls.Add(this.rbtnFeminino);
@@ -100,8 +104,18 @@
             this.panel1.Location = new System.Drawing.Point(5, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 388);
+            this.panel1.Size = new System.Drawing.Size(416, 388);
             this.panel1.TabIndex = 0;
+            // 
+            // pbImgUsuario
+            // 
+            this.pbImgUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImgUsuario.Location = new System.Drawing.Point(284, 16);
+            this.pbImgUsuario.Name = "pbImgUsuario";
+            this.pbImgUsuario.Size = new System.Drawing.Size(119, 125);
+            this.pbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImgUsuario.TabIndex = 28;
+            this.pbImgUsuario.TabStop = false;
             // 
             // cbRgExp
             // 
@@ -370,7 +384,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Image = global::View.Properties.Resources.delete30;
-            this.btnCancelar.Location = new System.Drawing.Point(307, 401);
+            this.btnCancelar.Location = new System.Drawing.Point(337, 399);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(82, 63);
@@ -384,7 +398,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Image = global::View.Properties.Resources.checked21;
-            this.btnSalvar.Location = new System.Drawing.Point(136, 401);
+            this.btnSalvar.Location = new System.Drawing.Point(169, 399);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(80, 63);
@@ -398,7 +412,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Image = global::View.Properties.Resources.clean32;
-            this.btnLimpar.Location = new System.Drawing.Point(221, 401);
+            this.btnLimpar.Location = new System.Drawing.Point(253, 399);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(80, 63);
@@ -409,20 +423,30 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
+            // btnSelecionarImg
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(302, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 125);
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.btnSelecionarImg.Location = new System.Drawing.Point(284, 150);
+            this.btnSelecionarImg.Name = "btnSelecionarImg";
+            this.btnSelecionarImg.Size = new System.Drawing.Size(42, 23);
+            this.btnSelecionarImg.TabIndex = 29;
+            this.btnSelecionarImg.Text = "...";
+            this.btnSelecionarImg.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvarImg
+            // 
+            this.btnSalvarImg.Location = new System.Drawing.Point(341, 150);
+            this.btnSalvarImg.Name = "btnSalvarImg";
+            this.btnSalvarImg.Size = new System.Drawing.Size(62, 23);
+            this.btnSalvarImg.TabIndex = 30;
+            this.btnSalvarImg.Text = "Salvar";
+            this.btnSalvarImg.UseVisualStyleBackColor = true;
             // 
             // FrmCadastrar
             // 
             this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 468);
+            this.ClientSize = new System.Drawing.Size(432, 468);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -436,7 +460,7 @@
             this.Load += new System.EventHandler(this.FrmCadastrar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,6 +498,8 @@
         private System.Windows.Forms.RadioButton rbtnMasculino;
         private System.Windows.Forms.DateTimePicker dateTimeDataNasc;
         private System.Windows.Forms.ComboBox cbRgExp;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImgUsuario;
+        private System.Windows.Forms.Button btnSalvarImg;
+        private System.Windows.Forms.Button btnSelecionarImg;
     }
 }

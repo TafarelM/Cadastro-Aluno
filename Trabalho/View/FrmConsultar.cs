@@ -11,7 +11,7 @@ using System.Windows.Forms;
 //pegando
 
 //adicionada
-using Controller;
+using BLL;
 using ObjetoTransferencia;
 
 namespace View

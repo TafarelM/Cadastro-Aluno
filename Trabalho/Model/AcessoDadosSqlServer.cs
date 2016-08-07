@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 //para usar a string de conexão da propriedades
-using Model.Properties;
+using DAL.Properties;
 
 
-namespace Model
+namespace DAL
 {
     public class AcessoDadosSqlServer
     {

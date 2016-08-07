@@ -48,9 +48,9 @@
     <Compile Include="ValidarAluno.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
+    <ProjectReference Include="..\Model\DAL.csproj">
       <Project>{c9d67280-a70e-4fec-9bef-da373c3e8876}</Project>
-      <Name>Model</Name>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\ObjetoTransferencia\ObjetoTransferencia.csproj">
       <Project>{d6cf2399-010c-4328-945c-c20dae4a00b9}</Project>

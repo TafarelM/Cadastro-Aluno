@@ -8,24 +8,22 @@ using System.Threading.Tasks;
 using ObjetoTransferencia;
 using System.Data;
 
-namespace Model
+namespace DAL
 {
     public class EstadoDAL
     {
         //instânciar  = criar um novo objeto baseado em um modelo
         AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
 
-        public EstadoColecao ConsultarNome(string nome)
+        public EstadoColecao ComboBox()
         {
             try
             {
                 EstadoColecao estadoColecao = new EstadoColecao();
                 //limpar antes de usar
-                acessoDadosSqlServer.LimparParametros();
-                //adicionar parametros
-                acessoDadosSqlServer.AdicionarParametros("@Nome", nome);
+
                 //executar a consulta no banco e guarda o conteudo em um DataTable
-                DataTable dataTableAluno = acessoDadosSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "SP_Estado_ConsultarPorNome");
+                DataTable dataTableAluno = acessoDadosSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "SP_Estado_ComboBox");
                 //
                 foreach (DataRow linha in dataTableAluno.Rows)
                 {

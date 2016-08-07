@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //adicionada
-using Controller;
+using BLL;
 using ObjetoTransferencia;
 
 namespace View

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //add
 using ObjetoTransferencia;
 
-namespace Controller
+namespace BLL
 {
     public class ValidarAluno
     {

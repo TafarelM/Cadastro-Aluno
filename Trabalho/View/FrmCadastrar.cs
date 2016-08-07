@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //adicionaie
-using Controller;
+using BLL;
 using ObjetoTransferencia;
 
 namespace View
@@ -89,20 +89,20 @@ namespace View
                 txtSenha.Text = aluno.usuario.senha; 
 
                 //desabilitando os campos da tela
-                txtCod.Enabled = false;
-                txtNome.Enabled = false;
-                txtSobrenome.Enabled = false;
-                txtmCpf.Enabled = false;
-                txtmRg.Enabled = false;
+                txtCod.ReadOnly = true;
+                txtNome.ReadOnly = true;
+                txtSobrenome.ReadOnly = true;
+                txtmCpf.ReadOnly = true;
+                txtmRg.ReadOnly = true;
                 cbRgExp.Enabled = false;
                 dateTimeDataNasc.Enabled = false;
-                txtEmail.Enabled = false;
+                txtEmail.ReadOnly = true;
                 rbtnMasculino.Enabled = false;
                 rbtnFeminino.Enabled = false;
-                txtmTelefone.Enabled = false;
-                txtCel.Enabled = false;
-                txtUsuario.Enabled = false;
-                txtSenha.Enabled = false;
+                txtmTelefone.ReadOnly = true;
+                txtCel.ReadOnly = true;
+                txtUsuario.ReadOnly = true;
+                txtSenha.ReadOnly = true;
 
                 //mudando a text do botão e desabilitando ele
                 btnSalvar.Visible = false;
@@ -189,7 +189,7 @@ namespace View
                 }
                 aluno.telefone = txtmTelefone.Text;
                 aluno.celular = txtCel.Text;
-                aluno.usuario.senha = txtUsuario.Text;
+                aluno.usuario.usuario = txtUsuario.Text;
                 aluno.usuario.senha = txtSenha.Text;
 
                 //envia para o metodo tudo q foi colocado na classe cliente
@@ -241,7 +241,8 @@ namespace View
         private void FrmCadastrar_Load(object sender, EventArgs e)
         {
             EstadoBLL estadoBLL = new EstadoBLL();
-            cbRgExp.DataSource = estadoBLL.ConsultarNome("");
+            cbRgExp.DataSource = estadoBLL.ComboBox();
+            //cbRgExp.SelectedIndex = -1;
             cbRgExp.DisplayMember = "SiglaEstado";
             cbRgExp.ValueMember = "IDEstado";
         }

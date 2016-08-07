@@ -159,9 +159,9 @@
     <None Include="Resources\key195.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controller\Controller.csproj">
+    <ProjectReference Include="..\Controller\BLL.csproj">
       <Project>{d9c0546c-77ab-47a4-9b48-f63f470c8568}</Project>
-      <Name>Controller</Name>
+      <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\ObjetoTransferencia\ObjetoTransferencia.csproj">
       <Project>{d6cf2399-010c-4328-945c-c20dae4a00b9}</Project>

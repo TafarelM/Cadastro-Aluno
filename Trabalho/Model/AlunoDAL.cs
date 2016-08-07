@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using ObjetoTransferencia;
 using System.Data;
 
-namespace Model
+namespace DAL
 {
     public class AlunoDAL
     {
@@ -56,7 +56,6 @@ namespace Model
         {
             try
             {
-                aluno.usuario = new Usuario();
                 //limpar antes de usar
                 acessoDadosSqlServer.LimparParametros();
                 //adicionar parametros
@@ -138,7 +137,7 @@ namespace Model
                     //usuario
                     aluno.usuario.idUsuario = Convert.ToInt32(linha["IDUsuario"]);
                     aluno.usuario.usuario = Convert.ToString(linha["Usuario"]);
-                    //aluno.usuario.senha = Convert.ToString(linha["Senha"]);
+                    aluno.usuario.senha = Convert.ToString(linha["Senha"]);
 
                     //adiciona os dados de cliente na clienteColecao
                     alunoColecao.Add(aluno);
@@ -188,7 +187,7 @@ namespace Model
                     //usuario
                     aluno.usuario.idUsuario = Convert.ToInt32(linha["IDUsuario"]);
                     aluno.usuario.usuario = Convert.ToString(linha["Usuario"]);
-                    //aluno.usuario.senha = Convert.ToString(linha["Senha"]);
+                    aluno.usuario.senha = Convert.ToString(linha["Senha"]);
 
                     //adiciona a coleção
                     alunoColecao.Add(aluno);

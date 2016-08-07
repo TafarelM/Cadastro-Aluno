@@ -5,19 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 //referencias adicionadas
-using Model;
+using DAL;
 using ObjetoTransferencia;
 using System.Data;
 
-namespace Controller
+namespace BLL
 {
     public class EstadoBLL
     {
-        public EstadoColecao ConsultarNome(string nome)
+        public EstadoColecao ComboBox()
         {
             EstadoDAL dal = new EstadoDAL();
             EstadoColecao colecaoDTO = new EstadoColecao();
-            colecaoDTO = dal.ConsultarNome(nome);
+            colecaoDTO = dal.ComboBox();
 
             return colecaoDTO;
         }
