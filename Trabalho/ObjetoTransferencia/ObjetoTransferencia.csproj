@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="AlunoColecao.cs" />
     <Compile Include="Aluno.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="EstadoColecao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioColecao.cs" />

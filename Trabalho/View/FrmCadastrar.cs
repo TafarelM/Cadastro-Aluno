@@ -44,7 +44,7 @@ namespace View
                 txtSobrenome.Text = aluno.sobrenome;
                 txtmCpf.Text = aluno.cpf;
                 txtmRg.Text = aluno.rg;
-                txtRgExp.Text = aluno.rgExp;
+                cbRgExp.Text = aluno.rgExp;
                 dateTimeDataNasc.Text = aluno.dataNascimento.ToString();
                 txtEmail.Text = aluno.email;
                 if (aluno.sexo == "Masculino")
@@ -72,7 +72,7 @@ namespace View
                 txtSobrenome.Text = aluno.sobrenome;
                 txtmCpf.Text = aluno.cpf;
                 txtmRg.Text = aluno.rg;
-                txtRgExp.Text = aluno.rgExp;
+                cbRgExp.Text = aluno.rgExp;
                 dateTimeDataNasc.Text = aluno.dataNascimento.ToString();
                 txtEmail.Text = aluno.email;
                 if (aluno.sexo == "Masculino")
@@ -94,7 +94,7 @@ namespace View
                 txtSobrenome.Enabled = false;
                 txtmCpf.Enabled = false;
                 txtmRg.Enabled = false;
-                txtRgExp.Enabled = false;
+                cbRgExp.Enabled = false;
                 dateTimeDataNasc.Enabled = false;
                 txtEmail.Enabled = false;
                 rbtnMasculino.Enabled = false;
@@ -127,7 +127,7 @@ namespace View
                 aluno.sobrenome = txtSobrenome.Text;
                 aluno.cpf = txtmCpf.Text;
                 aluno.rg = txtmRg.Text;
-                aluno.rgExp = txtRgExp.Text;
+                aluno.rgExp = cbRgExp.Text;
                 aluno.dataNascimento = dateTimeDataNasc.Value;
                 aluno.email = txtEmail.Text;
                 if (rbtnMasculino.Checked == true)
@@ -178,7 +178,7 @@ namespace View
                 aluno.sobrenome = txtSobrenome.Text;
                 aluno.cpf = txtmCpf.Text;
                 aluno.rg = txtmRg.Text;
-                aluno.rgExp = txtRgExp.Text;
+                aluno.rgExp = cbRgExp.Text;
                 aluno.dataNascimento = dateTimeDataNasc.Value;
                 aluno.email = txtEmail.Text;
                 if (rbtnMasculino.Checked == true)
@@ -228,7 +228,7 @@ namespace View
             txtSobrenome.Text = null;
             txtmCpf.Text = null;
             txtmRg.Text = null;
-            txtRgExp.Text = null;
+            //cbRgExp.Text = null;
             txtEmail.Text = null;
             rbtnMasculino.Checked = false;
             rbtnFeminino.Checked = false;
@@ -238,5 +238,12 @@ namespace View
             txtSenha.Text = null;            
         }
 
+        private void FrmCadastrar_Load(object sender, EventArgs e)
+        {
+            EstadoBLL estadoBLL = new EstadoBLL();
+            cbRgExp.DataSource = estadoBLL.ConsultarNome("");
+            cbRgExp.DisplayMember = "SiglaEstado";
+            cbRgExp.ValueMember = "IDEstado";
+        }
     }
 }
