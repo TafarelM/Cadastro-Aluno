@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //adicionaie
@@ -16,11 +9,14 @@ namespace View
 {
     public partial class FrmCadastrar : Form
     {
+
         //parar poder usar o metodo do clienteCadastrar
         AcaoNaTela acaoNaTelaSelecionada;
 
         public FrmCadastrar(AcaoNaTela acaoNaTela, Aluno aluno)
         {
+
+
             InitializeComponent();
 
             //guardando os dados para poder usar fora do frmClienteCadastrar
@@ -84,7 +80,7 @@ namespace View
                     rbtnFeminino.Checked = true;
                 }
                 txtmTelefone.Text = aluno.telefone;
-                txtCel.Text = aluno.celular;
+                txtCel.Text = aluno.celular;                
                 txtUsuario.Text = aluno.usuario.usuario;
                 txtSenha.Text = aluno.usuario.senha; 
 
@@ -246,5 +242,6 @@ namespace View
             cbRgExp.DisplayMember = "SiglaEstado";
             cbRgExp.ValueMember = "IDEstado";
         }
+
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbImgUsuario = new System.Windows.Forms.PictureBox();
             this.cbRgExp = new System.Windows.Forms.ComboBox();
             this.dateTimeDataNasc = new System.Windows.Forms.DateTimePicker();
             this.rbtnFeminino = new System.Windows.Forms.RadioButton();
@@ -37,7 +36,6 @@
             this.txtCod = new System.Windows.Forms.TextBox();
             this.lblCod = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtCel = new System.Windows.Forms.MaskedTextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -57,13 +55,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.gbSexo = new System.Windows.Forms.GroupBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnSelecionarImg = new System.Windows.Forms.Button();
-            this.btnSalvarImg = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgUsuario)).BeginInit();
+            this.gbSexo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,17 +69,12 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnSalvarImg);
-            this.panel1.Controls.Add(this.btnSelecionarImg);
-            this.panel1.Controls.Add(this.pbImgUsuario);
+            this.panel1.Controls.Add(this.gbSexo);
             this.panel1.Controls.Add(this.cbRgExp);
             this.panel1.Controls.Add(this.dateTimeDataNasc);
-            this.panel1.Controls.Add(this.rbtnFeminino);
-            this.panel1.Controls.Add(this.rbtnMasculino);
             this.panel1.Controls.Add(this.txtCod);
             this.panel1.Controls.Add(this.lblCod);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.txtSenha);
             this.panel1.Controls.Add(this.txtCel);
             this.panel1.Controls.Add(this.label18);
@@ -104,47 +97,37 @@
             this.panel1.Location = new System.Drawing.Point(5, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(416, 388);
+            this.panel1.Size = new System.Drawing.Size(416, 352);
             this.panel1.TabIndex = 0;
-            // 
-            // pbImgUsuario
-            // 
-            this.pbImgUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbImgUsuario.Location = new System.Drawing.Point(284, 16);
-            this.pbImgUsuario.Name = "pbImgUsuario";
-            this.pbImgUsuario.Size = new System.Drawing.Size(119, 125);
-            this.pbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImgUsuario.TabIndex = 28;
-            this.pbImgUsuario.TabStop = false;
             // 
             // cbRgExp
             // 
             this.cbRgExp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbRgExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbRgExp.FormattingEnabled = true;
-            this.cbRgExp.Location = new System.Drawing.Point(127, 165);
+            this.cbRgExp.Location = new System.Drawing.Point(118, 161);
             this.cbRgExp.MaxDropDownItems = 27;
             this.cbRgExp.Name = "cbRgExp";
             this.cbRgExp.Size = new System.Drawing.Size(92, 21);
-            this.cbRgExp.TabIndex = 27;
+            this.cbRgExp.TabIndex = 6;
             // 
             // dateTimeDataNasc
             // 
             this.dateTimeDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeDataNasc.Location = new System.Drawing.Point(18, 250);
+            this.dateTimeDataNasc.Location = new System.Drawing.Point(18, 248);
             this.dateTimeDataNasc.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDataNasc.Name = "dateTimeDataNasc";
-            this.dateTimeDataNasc.Size = new System.Drawing.Size(87, 20);
-            this.dateTimeDataNasc.TabIndex = 16;
+            this.dateTimeDataNasc.Size = new System.Drawing.Size(94, 20);
+            this.dateTimeDataNasc.TabIndex = 9;
             // 
             // rbtnFeminino
             // 
             this.rbtnFeminino.AutoSize = true;
-            this.rbtnFeminino.Location = new System.Drawing.Point(94, 293);
+            this.rbtnFeminino.Location = new System.Drawing.Point(83, 18);
             this.rbtnFeminino.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnFeminino.Name = "rbtnFeminino";
             this.rbtnFeminino.Size = new System.Drawing.Size(67, 17);
-            this.rbtnFeminino.TabIndex = 19;
+            this.rbtnFeminino.TabIndex = 1;
             this.rbtnFeminino.TabStop = true;
             this.rbtnFeminino.Text = "Feminino";
             this.rbtnFeminino.UseVisualStyleBackColor = true;
@@ -152,23 +135,23 @@
             // rbtnMasculino
             // 
             this.rbtnMasculino.AutoSize = true;
-            this.rbtnMasculino.Location = new System.Drawing.Point(18, 293);
+            this.rbtnMasculino.Location = new System.Drawing.Point(5, 18);
             this.rbtnMasculino.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnMasculino.Name = "rbtnMasculino";
             this.rbtnMasculino.Size = new System.Drawing.Size(73, 17);
-            this.rbtnMasculino.TabIndex = 18;
+            this.rbtnMasculino.TabIndex = 0;
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "Masculino";
             this.rbtnMasculino.UseVisualStyleBackColor = true;
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(18, 35);
+            this.txtCod.Location = new System.Drawing.Point(18, 33);
             this.txtCod.Margin = new System.Windows.Forms.Padding(2);
             this.txtCod.Name = "txtCod";
             this.txtCod.ReadOnly = true;
             this.txtCod.Size = new System.Drawing.Size(66, 20);
-            this.txtCod.TabIndex = 25;
+            this.txtCod.TabIndex = 0;
             // 
             // lblCod
             // 
@@ -183,46 +166,36 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(124, 146);
+            this.label14.Location = new System.Drawing.Point(118, 144);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(42, 13);
             this.label14.TabIndex = 7;
             this.label14.Text = "Rg Exp";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 274);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 13);
-            this.label20.TabIndex = 17;
-            this.label20.Text = "Sexo";
-            // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(124, 336);
+            this.txtSenha.Location = new System.Drawing.Point(111, 302);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(76, 20);
-            this.txtSenha.TabIndex = 23;
+            this.txtSenha.TabIndex = 12;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtCel
             // 
-            this.txtCel.Location = new System.Drawing.Point(18, 166);
+            this.txtCel.Location = new System.Drawing.Point(18, 162);
             this.txtCel.Margin = new System.Windows.Forms.Padding(2);
             this.txtCel.Mask = "(00)00000-0000";
             this.txtCel.Name = "txtCel";
             this.txtCel.Size = new System.Drawing.Size(91, 20);
-            this.txtCel.TabIndex = 12;
+            this.txtCel.TabIndex = 5;
             this.txtCel.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(122, 318);
+            this.label18.Location = new System.Drawing.Point(108, 284);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(38, 13);
@@ -231,16 +204,16 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(18, 336);
+            this.txtUsuario.Location = new System.Drawing.Point(18, 302);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(76, 20);
-            this.txtUsuario.TabIndex = 21;
+            this.txtUsuario.TabIndex = 11;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 150);
+            this.label16.Location = new System.Drawing.Point(18, 144);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(67, 13);
@@ -249,18 +222,18 @@
             // 
             // txtmTelefone
             // 
-            this.txtmTelefone.Location = new System.Drawing.Point(18, 207);
+            this.txtmTelefone.Location = new System.Drawing.Point(18, 205);
             this.txtmTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.txtmTelefone.Mask = "(00)0000-0000";
             this.txtmTelefone.Name = "txtmTelefone";
-            this.txtmTelefone.Size = new System.Drawing.Size(87, 20);
-            this.txtmTelefone.TabIndex = 14;
+            this.txtmTelefone.Size = new System.Drawing.Size(91, 20);
+            this.txtmTelefone.TabIndex = 7;
             this.txtmTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(18, 316);
+            this.label17.Location = new System.Drawing.Point(18, 284);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(33, 13);
@@ -270,7 +243,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 188);
+            this.label15.Location = new System.Drawing.Point(18, 187);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(55, 13);
@@ -279,16 +252,16 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(140, 250);
+            this.txtEmail.Location = new System.Drawing.Point(118, 205);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(142, 20);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 8;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(140, 231);
+            this.label13.Location = new System.Drawing.Point(118, 190);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(35, 13);
@@ -298,7 +271,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 231);
+            this.label5.Location = new System.Drawing.Point(15, 230);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 13);
@@ -307,27 +280,27 @@
             // 
             // txtmRg
             // 
-            this.txtmRg.Location = new System.Drawing.Point(124, 121);
+            this.txtmRg.Location = new System.Drawing.Point(118, 119);
             this.txtmRg.Margin = new System.Windows.Forms.Padding(2);
             this.txtmRg.Mask = "000.000.000";
             this.txtmRg.Name = "txtmRg";
-            this.txtmRg.Size = new System.Drawing.Size(95, 20);
-            this.txtmRg.TabIndex = 6;
+            this.txtmRg.Size = new System.Drawing.Size(76, 20);
+            this.txtmRg.TabIndex = 4;
             this.txtmRg.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtmCpf
             // 
-            this.txtmCpf.Location = new System.Drawing.Point(18, 121);
+            this.txtmCpf.Location = new System.Drawing.Point(18, 119);
             this.txtmCpf.Margin = new System.Windows.Forms.Padding(2);
             this.txtmCpf.Mask = "000.000.000-00";
             this.txtmCpf.Name = "txtmCpf";
-            this.txtmCpf.Size = new System.Drawing.Size(82, 20);
-            this.txtmCpf.TabIndex = 4;
+            this.txtmCpf.Size = new System.Drawing.Size(90, 20);
+            this.txtmCpf.TabIndex = 3;
             this.txtmCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtSobrenome
             // 
-            this.txtSobrenome.Location = new System.Drawing.Point(143, 78);
+            this.txtSobrenome.Location = new System.Drawing.Point(140, 76);
             this.txtSobrenome.Margin = new System.Windows.Forms.Padding(2);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(121, 20);
@@ -335,16 +308,16 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(18, 78);
+            this.txtNome.Location = new System.Drawing.Point(18, 76);
             this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(116, 20);
-            this.txtNome.TabIndex = 0;
+            this.txtNome.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(124, 105);
+            this.label4.Location = new System.Drawing.Point(118, 104);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
@@ -354,7 +327,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 102);
+            this.label3.Location = new System.Drawing.Point(18, 101);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
@@ -381,28 +354,25 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Nome";
             // 
-            // btnCancelar
+            // gbSexo
             // 
-            this.btnCancelar.Image = global::View.Properties.Resources.delete30;
-            this.btnCancelar.Location = new System.Drawing.Point(337, 399);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(82, 63);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            this.gbSexo.Controls.Add(this.rbtnMasculino);
+            this.gbSexo.Controls.Add(this.rbtnFeminino);
+            this.gbSexo.Location = new System.Drawing.Point(124, 230);
+            this.gbSexo.Name = "gbSexo";
+            this.gbSexo.Size = new System.Drawing.Size(155, 43);
+            this.gbSexo.TabIndex = 10;
+            this.gbSexo.TabStop = false;
+            this.gbSexo.Text = "Sexo";
             // 
             // btnSalvar
             // 
             this.btnSalvar.Image = global::View.Properties.Resources.checked21;
-            this.btnSalvar.Location = new System.Drawing.Point(169, 399);
+            this.btnSalvar.Location = new System.Drawing.Point(171, 362);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(80, 63);
-            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -412,41 +382,41 @@
             // btnLimpar
             // 
             this.btnLimpar.Image = global::View.Properties.Resources.clean32;
-            this.btnLimpar.Location = new System.Drawing.Point(253, 399);
+            this.btnLimpar.Location = new System.Drawing.Point(255, 362);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(80, 63);
-            this.btnLimpar.TabIndex = 2;
+            this.btnLimpar.TabIndex = 1;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnSelecionarImg
+            // btnCancelar
             // 
-            this.btnSelecionarImg.Location = new System.Drawing.Point(284, 150);
-            this.btnSelecionarImg.Name = "btnSelecionarImg";
-            this.btnSelecionarImg.Size = new System.Drawing.Size(42, 23);
-            this.btnSelecionarImg.TabIndex = 29;
-            this.btnSelecionarImg.Text = "...";
-            this.btnSelecionarImg.UseVisualStyleBackColor = true;
+            this.btnCancelar.Image = global::View.Properties.Resources.delete30;
+            this.btnCancelar.Location = new System.Drawing.Point(339, 362);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(82, 63);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnSalvarImg
+            // openFileDialog1
             // 
-            this.btnSalvarImg.Location = new System.Drawing.Point(341, 150);
-            this.btnSalvarImg.Name = "btnSalvarImg";
-            this.btnSalvarImg.Size = new System.Drawing.Size(62, 23);
-            this.btnSalvarImg.TabIndex = 30;
-            this.btnSalvarImg.Text = "Salvar";
-            this.btnSalvarImg.UseVisualStyleBackColor = true;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FrmCadastrar
             // 
             this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 468);
+            this.ClientSize = new System.Drawing.Size(432, 431);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -460,7 +430,8 @@
             this.Load += new System.EventHandler(this.FrmCadastrar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgUsuario)).EndInit();
+            this.gbSexo.ResumeLayout(false);
+            this.gbSexo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -490,7 +461,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label lblCod;
@@ -498,8 +468,7 @@
         private System.Windows.Forms.RadioButton rbtnMasculino;
         private System.Windows.Forms.DateTimePicker dateTimeDataNasc;
         private System.Windows.Forms.ComboBox cbRgExp;
-        private System.Windows.Forms.PictureBox pbImgUsuario;
-        private System.Windows.Forms.Button btnSalvarImg;
-        private System.Windows.Forms.Button btnSelecionarImg;
+        private System.Windows.Forms.GroupBox gbSexo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

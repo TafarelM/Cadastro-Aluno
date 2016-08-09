@@ -181,6 +181,7 @@
     <None Include="Resources\door32.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1470672765_user_male.png" />
     <Content Include="Resources\clean32.png" />
     <Content Include="Resources\locked59.png" />
   </ItemGroup>

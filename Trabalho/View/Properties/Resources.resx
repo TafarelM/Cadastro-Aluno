@@ -121,14 +121,14 @@
   <data name="key195" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key195.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magnifying glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifying glass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="magnifying glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magnifying glass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Save_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +138,9 @@
   </data>
   <data name="checked21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="locked59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locked59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,13 +157,13 @@
   <data name="door32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\door32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Save_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user168" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user168.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="locked59" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\locked59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1470672765_user_male" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470672765_user_male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
