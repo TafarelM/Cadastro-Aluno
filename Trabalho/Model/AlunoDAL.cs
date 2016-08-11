@@ -162,13 +162,12 @@ namespace DAL
                 acessoDadosSqlServer.AdicionarParametros("@IDAluno", idAluno);
                 //executar a consulta no banco e guarda o conteudo em um DataTable
                 DataTable dataTableAluno = acessoDadosSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "SP_Aluno_ConsultarPorID");
-                //
+
                 foreach (DataRow linha in dataTableAluno.Rows)
                 {
-                    //
                     Aluno aluno = new Aluno();
                     aluno.usuario = new Usuario();
-                    //
+
                     aluno.idAluno = Convert.ToInt32(linha["IDAluno"]);
                     aluno.nome = Convert.ToString(linha["Nome"]);
                     aluno.sobrenome = Convert.ToString(linha["Sobrenome"]);

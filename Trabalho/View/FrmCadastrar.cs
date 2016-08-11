@@ -139,8 +139,6 @@ namespace View
                 aluno.usuario.usuario = txtUsuario.Text;
                 aluno.usuario.senha = txtSenha.Text;
 
-                //VALIDAR CAMPOS
-
                 //envia para o metodo tudo q foi colocado na classe cliente
                 AlunoBLL alunoBLL = new AlunoBLL();
                 string retorno = alunoBLL.Inserir(aluno);
@@ -158,7 +156,7 @@ namespace View
                 {
                     //se der erro
                     MessageBox.Show("Não foi possivel Inserir. Detalhes: " + retorno, "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DialogResult = DialogResult.No;
+                    //this.DialogResult = DialogResult.No;
                 }
 
             }
@@ -198,12 +196,12 @@ namespace View
                     //salvo com sucessso
                     int idAluno = Convert.ToInt32(retorno);
                     MessageBox.Show("Registro Alterado com Sucesso!. ");
-                    //
+                    
                     this.DialogResult = DialogResult.Yes;
                 }catch {
                     //se der erro
                     MessageBox.Show("Não foi possivel Alterar o registro. Detalhes: " + retorno, "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DialogResult = DialogResult.No;
+                   //this.DialogResult = DialogResult.No;
                 }
 
             }            
@@ -212,19 +210,16 @@ namespace View
         //BOTÃO CANCELAR
         private void button2_Click(object sender, EventArgs e)
         {
-            //cancelar
             DialogResult = DialogResult.No;
         }
 
         //BOTÃO LIMPAR
         private void button3_Click(object sender, EventArgs e)
         {
-            //limpar
             txtNome.Text = null;
             txtSobrenome.Text = null;
             txtmCpf.Text = null;
             txtmRg.Text = null;
-            //cbRgExp.Text = null;
             txtEmail.Text = null;
             rbtnMasculino.Checked = false;
             rbtnFeminino.Checked = false;
@@ -238,10 +233,27 @@ namespace View
         {
             EstadoBLL estadoBLL = new EstadoBLL();
             cbRgExp.DataSource = estadoBLL.ComboBox();
-            //cbRgExp.SelectedIndex = -1;
             cbRgExp.DisplayMember = "SiglaEstado";
             cbRgExp.ValueMember = "IDEstado";
         }
 
+        private void txtmCpf_Leave(object sender, EventArgs e)
+        {
+            lblValidacaoCPF.Visible = false;
+
+            if (Validacao.IsCpf(txtmCpf.Text) == false)
+            {
+                lblValidacaoCPF.Visible = true;
+                lblValidacaoCPF.Text = "Valor incorreto";
+                lblValidacaoCPF.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                lblValidacaoCPF.Visible = true;
+                lblValidacaoCPF.Text = "Valor correto";
+                lblValidacaoCPF.ForeColor = System.Drawing.Color.Green;
+            }
+            
+         }
     }
 }

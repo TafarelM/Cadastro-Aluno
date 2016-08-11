@@ -15,8 +15,7 @@ namespace ObjetoTransferencia
         public string sexo { get; set; }
         public string telefone { get; set; }
         public string celular { get; set; }
-        public byte[] foto { get; set; }
+        //public byte[] foto { get; set; }
         public Usuario usuario { get; set; }
-
     }
 }
