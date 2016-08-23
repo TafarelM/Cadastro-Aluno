@@ -163,6 +163,14 @@ namespace BLL
             return retorno;
         }
 
+        public string consultarCPF(string cpf)
+        {
+            AlunoDAL dal = new AlunoDAL();
+            string retorno = dal.consultarCPF(cpf);
+
+            return retorno;
+        }
+
         //TROCAR SENHA NÃO PEGO
         /*
         public string TrocarSenha(int idAluno , string senha)

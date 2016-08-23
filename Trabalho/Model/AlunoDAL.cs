@@ -217,6 +217,25 @@ namespace DAL
 
         }
 
+        public string consultarCPF(string cpf)
+        {
+            try
+            {
+                //limpar antes de usar
+                acessoDadosSqlServer.LimparParametros();
+                //adicionar parametros
+                acessoDadosSqlServer.AdicionarParametros("@CPF", cpf);
+                //chamar a procedure para manipulação
+                string retorno = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "SP_Aluno_ConsultarPorCPF").ToString();
+                return retorno;
+            }
+            catch (Exception exception)
+            {
+                return exception.Message;
+            }
+
+        }
+
         public string RecuperarSenha(string usuario, DateTime dataNascimento, string cpf)
         {
             try

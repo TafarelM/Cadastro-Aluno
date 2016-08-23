@@ -241,17 +241,28 @@ namespace View
         {
             lblValidacaoCPF.Visible = false;
 
-            if (Validacao.IsCpf(txtmCpf.Text) == false)
+            AlunoBLL bll = new AlunoBLL();
+
+            if (bll.consultarCPF(txtmCpf.Text) == "1")
             {
                 lblValidacaoCPF.Visible = true;
-                lblValidacaoCPF.Text = "Valor incorreto";
+                lblValidacaoCPF.Text = "Já Cadastrado";
                 lblValidacaoCPF.ForeColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                lblValidacaoCPF.Visible = true;
-                lblValidacaoCPF.Text = "Valor correto";
-                lblValidacaoCPF.ForeColor = System.Drawing.Color.Green;
+
+            }else{
+
+                if (Validacao.IsCpf(txtmCpf.Text) == false)
+                {
+                    lblValidacaoCPF.Visible = true;
+                    lblValidacaoCPF.Text = "Valor incorreto";
+                    lblValidacaoCPF.ForeColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    lblValidacaoCPF.Visible = true;
+                    lblValidacaoCPF.Text = "Valor correto";
+                    lblValidacaoCPF.ForeColor = System.Drawing.Color.Green;
+                }
             }
             
          }

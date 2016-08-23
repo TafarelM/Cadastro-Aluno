@@ -123,8 +123,6 @@ namespace View
         //BOTÃO CONSULTAR
         private void btnConsultar_Click_1(object sender, EventArgs e)
         {
-            //CONSULTAR
-
             //verificar se tem algum registro selecionado no grid
             if (dataGridViewConsultar.SelectedRows.Count == 0)
             {
@@ -151,6 +149,16 @@ namespace View
         {
             //sair
             Close();
+        }
+
+        //DOUBLE CLICK NA CELL DA GRID
+        private void dataGridViewConsultar_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //pegar o cliente selecionado no grid
+            Aluno alunoSelecionado = (dataGridViewConsultar.SelectedRows[0].DataBoundItem as Aluno);
+
+            FrmCadastrar frmCadastrar = new FrmCadastrar(AcaoNaTela.Consultar, alunoSelecionado);
+            frmCadastrar.ShowDialog();
         }
     }
 }
